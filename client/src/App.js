@@ -10,7 +10,7 @@ function App() {
   const [result, setResult] = useState(0)
 
   const sendPing = async () =>{
-    axios.get('http://167.172.48.12:8080/ping')
+    axios.get('http://167.172.48.12:8080/server/ping')
     .then((res) =>{
       setMessage(res.data)
     })
@@ -22,7 +22,7 @@ function App() {
 
   const addNums = (e) =>{
     e.preventDefault()
-    axios.post('http://167.172.48.12:8080/addNumbers',{
+    axios.post('http://167.172.48.12:8080/server/addNumbers',{
       number1:number1,
       number2:number2
     })
